@@ -26,7 +26,7 @@ class ProductNotifier extends StateNotifier<ProductState> {
 
   Future<void> getAllProducts({bool initialLoading = false}) async {
     try {
-      state = state.copyWith(initialLoading: initialLoading);
+      state = state.copyWith(initialLoading: true);
 
       final contactsResponse = await productRepository.getAllProducts();
       final listProducts =
@@ -74,16 +74,13 @@ class ProductNotifier extends StateNotifier<ProductState> {
 
     final currentCart = state.cartProducts ?? [];
 
-    // Verifica si el producto ya existe en el carrito
     for (CartProductEntity existingProduct in currentCart) {
       if (existingProduct.product.id == product.id &&
           existingProduct.size == size) {
-        // El producto ya existe en el carrito, no agregar y retornar false
         return false;
       }
     }
 
-    // El producto no existe en el carrito, agregar y retornar true
     final updatedCart = List<CartProductEntity>.from(currentCart)
       ..add(newProduct);
     state = state.copyWith(cartProducts: updatedCart);

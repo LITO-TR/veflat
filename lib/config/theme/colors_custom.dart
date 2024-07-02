@@ -7,6 +7,6 @@ class ColorsCustom {
   static const Color darkGray = Color(0xFF424242);
   static const Color accentBlue = Color(0xFF42A5F5);
   static const Color accentPurple = Color(0xFFBA68C8);
-  static const Color accentOrange = Color(0xFFFFA726);
+  static const Color accentOrange = Color(0xFFFA975E);
   static const Color beige = Color(0xFFFFE6D9);
 }

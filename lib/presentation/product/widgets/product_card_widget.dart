@@ -84,13 +84,13 @@ class _ProductCardWidgetState extends State<ProductCardWidget> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       widget.productEntity.name,
                       style: const TextStyle(
-                        fontSize: 16,
-                        color: ColorsCustom.primaryBlack,
+                        fontSize: 20,
+                        color: ColorsCustom.darkGray,
                       ),
                     ),
                     Text(

@@ -34,6 +34,9 @@ class _SizeSelectorWidgetState extends State<SizeSelectorWidget> {
             ),
           ],
         ),
+        const SizedBox(
+          height: 10,
+        ),
         SizedBox(
           height: 50,
           child: ListView.builder(

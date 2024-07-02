@@ -10,12 +10,6 @@ class HeaderCardWidget extends StatefulWidget {
 
 class _HeaderCardWidgetState extends State<HeaderCardWidget> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
