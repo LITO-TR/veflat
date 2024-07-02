@@ -1,3 +1,3 @@
 # veflat
 
-Prueba tecnica
+Prueba técnica
