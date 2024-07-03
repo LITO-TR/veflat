@@ -42,18 +42,16 @@ class CartProductListCardWidgetState
       child: SizedBox(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
               width: size.width * 0.45,
               height: size.height * .2,
-              child: Positioned.fill(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                    widget.product.product.image,
-                    fit: BoxFit.cover,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  widget.product.product.image,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),

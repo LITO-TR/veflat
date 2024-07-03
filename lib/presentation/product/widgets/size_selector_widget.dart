@@ -24,13 +24,13 @@ class _SizeSelectorWidgetState extends State<SizeSelectorWidget> {
               'Size:  ',
               style: textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.bold,
-                fontSize: 22,
+                fontSize: 20,
               ),
             ),
             Text(
               sizes[_selectedIndex],
               style: textTheme.bodyMedium
-                  ?.copyWith(fontSize: 28, color: Colors.grey),
+                  ?.copyWith(fontSize: 24, color: Colors.grey),
             ),
           ],
         ),
@@ -52,8 +52,8 @@ class _SizeSelectorWidgetState extends State<SizeSelectorWidget> {
                 },
                 child: Container(
                   alignment: Alignment.center,
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 19),
                   decoration: BoxDecoration(
                       color: _selectedIndex == index
                           ? ColorsCustom.accentOrange

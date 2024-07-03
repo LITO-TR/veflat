@@ -32,12 +32,10 @@ class CartScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const SingleChildScrollView(
-        child: Column(children: [
-          HeaderCardWidget(),
-          CartListWidget(),
-        ]),
-      ),
+      body: const Column(children: [
+        HeaderCardWidget(),
+        CartListWidget(),
+      ]),
     );
   }
 }

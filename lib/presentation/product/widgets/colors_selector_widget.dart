@@ -23,13 +23,13 @@ class _ColorsSelectorWidgetState extends State<ColorsSelectorWidget> {
               'Select Color:  ',
               style: textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.bold,
-                fontSize: 22,
+                fontSize: 20,
               ),
             ),
             Text(
               colorNames[_selectedIndex],
               style: textTheme.bodyMedium
-                  ?.copyWith(fontSize: 24, color: Colors.grey),
+                  ?.copyWith(fontSize: 22, color: Colors.grey),
             ),
           ],
         ),
@@ -46,7 +46,7 @@ class _ColorsSelectorWidgetState extends State<ColorsSelectorWidget> {
                   });
                 },
                 child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(colors[index]),
