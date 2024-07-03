@@ -66,11 +66,16 @@ class CartProductListCardWidgetState
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          widget.product.product.name,
-                          style: const TextStyle(
-                            fontSize: 22,
-                            color: ColorsCustom.primaryBlack,
+                        SizedBox(
+                          width: size.width * 0.35,
+                          child: Text(
+                            widget.product.product.name,
+                            maxLines: 1,
+                            style: const TextStyle(
+                              overflow: TextOverflow.ellipsis,
+                              fontSize: 20,
+                              color: ColorsCustom.primaryBlack,
+                            ),
                           ),
                         ),
                         Text(

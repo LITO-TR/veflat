@@ -10,7 +10,7 @@ class CustomAppBarWidget extends ConsumerWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final products = ref.watch(productProvider);
-
+    final countProducts = products.cartProducts?.length ?? 0;
     return AppBar(
       elevation: 0,
       leading: IconButton(
@@ -45,7 +45,7 @@ class CustomAppBarWidget extends ConsumerWidget implements PreferredSizeWidget {
                         builder: (context) => const CartScreen()));
               },
             ),
-            if (products.cartProducts!.isNotEmpty)
+            if (countProducts > 0)
               Positioned(
                 right: 0,
                 child: Container(
