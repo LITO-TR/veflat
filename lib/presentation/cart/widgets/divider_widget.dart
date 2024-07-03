@@ -30,8 +30,7 @@ class DashedDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPaint(
       painter: DashedLinePainter(),
-      size:
-          Size(double.infinity, height), // Ensures the divider takes full width
+      size: Size(double.infinity, height),
     );
   }
 }
