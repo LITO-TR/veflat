@@ -9,7 +9,8 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
+        color: Colors.white,
+        elevation: 0,
         child: Container(
           height: 56,
           decoration: BoxDecoration(
@@ -31,10 +32,12 @@ class CartScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(children: [
-        HeaderCardWidget(),
-        CartListWidget(),
-      ]),
+      body: const SingleChildScrollView(
+        child: Column(children: [
+          HeaderCardWidget(),
+          CartListWidget(),
+        ]),
+      ),
     );
   }
 }

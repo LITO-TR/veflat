@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:veflat/config/theme/colors_custom.dart';
 import 'package:veflat/domain/entities/cart_product_entity.dart';
 import 'package:veflat/presentation/cart/widgets/cart_product_list_card_widget.dart';
 import 'package:veflat/presentation/cart/widgets/custom_text_form_field.dart';
@@ -58,7 +59,7 @@ class CartListWidgetState extends ConsumerState<CartListWidget> {
               children: [
                 SizedBox(
                   width: size.width,
-                  height: size.height * 0.5,
+                  height: size.height * 0.45,
                   child: ListView.builder(
                     itemCount: productsCart.length,
                     itemBuilder: (context, index) {
@@ -78,9 +79,15 @@ class CartListWidgetState extends ConsumerState<CartListWidget> {
                     },
                   ),
                 ),
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
                 const CustomTextFormField(
                   hint: 'Apply Promo Code',
-                  suffixIcon: Icon(Icons.arrow_forward_ios_rounded),
+                  suffixIcon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: ColorsCustom.lightGray,
+                  ),
                 ),
                 SizedBox(
                   height: size.height * 0.03,
@@ -94,14 +101,14 @@ class CartListWidgetState extends ConsumerState<CartListWidget> {
                         const Text(
                           'Sub Total',
                           style: TextStyle(
-                              fontSize: 26,
+                              fontSize: 22,
                               color: Colors.grey,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
                           '€${updateSubTotal(productsCart, _quantity).toStringAsFixed(2)}',
                           style: const TextStyle(
-                              fontSize: 28,
+                              fontSize: 24,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -116,14 +123,14 @@ class CartListWidgetState extends ConsumerState<CartListWidget> {
                         Text(
                           'Shipping',
                           style: TextStyle(
-                              fontSize: 26,
+                              fontSize: 22,
                               color: Colors.grey,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
                           '€$shipping',
                           style: TextStyle(
-                              fontSize: 28,
+                              fontSize: 24,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -139,14 +146,14 @@ class CartListWidgetState extends ConsumerState<CartListWidget> {
                         const Text(
                           'Total',
                           style: TextStyle(
-                              fontSize: 26,
+                              fontSize: 22,
                               color: Colors.grey,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
                           '€${updateTotal(updateSubTotal(productsCart, _quantity), shipping).toStringAsFixed(2)}',
                           style: const TextStyle(
-                              fontSize: 28,
+                              fontSize: 24,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),

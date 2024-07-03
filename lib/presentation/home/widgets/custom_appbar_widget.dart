@@ -12,18 +12,27 @@ class CustomAppBarWidget extends StatelessWidget
       elevation: 0,
       leading: IconButton(
         splashRadius: 20,
-        icon: const Icon(FontAwesomeIcons.barsStaggered),
+        icon: const Icon(
+          FontAwesomeIcons.barsStaggered,
+          color: Colors.black,
+        ),
         onPressed: () {},
       ),
       actions: [
         IconButton(
           splashRadius: 20,
-          icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+          icon: const Icon(
+            FontAwesomeIcons.magnifyingGlass,
+            color: Colors.black,
+          ),
           onPressed: () {},
         ),
         IconButton(
           splashRadius: 20,
-          icon: const Icon(FontAwesomeIcons.bagShopping),
+          icon: const Icon(
+            FontAwesomeIcons.bagShopping,
+            color: Colors.black,
+          ),
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const CartScreen()));

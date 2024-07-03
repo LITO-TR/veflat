@@ -24,7 +24,7 @@ class ProductDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     final textTheme = Theme.of(context).textTheme;
-    String selectedSize = 'M'; // Default size
+    String selectedSize = 'M';
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -67,7 +67,7 @@ class ProductDetailScreen extends ConsumerWidget {
                       ),
                     ),
                     SizedBox(
-                      width: size.width * 0.2,
+                      width: size.width * 0.15,
                     ),
                     const Row(
                       children: [
@@ -95,7 +95,7 @@ class ProductDetailScreen extends ConsumerWidget {
                   ],
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 SizeSelectorWidget(
                   onSelectSize: (size) {
@@ -103,11 +103,11 @@ class ProductDetailScreen extends ConsumerWidget {
                   },
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 const ColorsSelectorWidget(),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -130,7 +130,8 @@ class ProductDetailScreen extends ConsumerWidget {
         ],
       )),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
+        color: Colors.white,
+        elevation: 0,
         child: Container(
           height: 56,
           decoration: BoxDecoration(

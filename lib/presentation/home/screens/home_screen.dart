@@ -24,11 +24,13 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomAppBarWidget(),
-      body: Column(
-        children: [
-          HomeHeaderWidget(),
-          ProductsWidget(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeHeaderWidget(),
+            ProductsWidget(),
+          ],
+        ),
       ),
     );
   }
