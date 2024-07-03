@@ -24,7 +24,7 @@ class ProductDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     final textTheme = Theme.of(context).textTheme;
-    String selectedSize = 'M'; // Default size
+    String selectedSize = 'M';
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -32,7 +32,7 @@ class ProductDetailScreen extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: size.height * 0.5,
+            height: size.height * 0.48,
             child: Stack(
               children: [
                 Positioned.fill(
@@ -54,20 +54,20 @@ class ProductDetailScreen extends ConsumerWidget {
               children: [
                 Text(
                   product.name,
-                  style: textTheme.bodyLarge,
+                  style: textTheme.bodyLarge?.copyWith(fontSize: 22),
                 ),
                 Row(
                   children: [
                     const Text(
                       '\$144.25',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         color: ColorsCustom.darkGray,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(
-                      width: size.width * 0.2,
+                      width: size.width * 0.15,
                     ),
                     const Row(
                       children: [
@@ -78,7 +78,7 @@ class ProductDetailScreen extends ConsumerWidget {
                         Text(
                           '4.8',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             color: ColorsCustom.darkGray,
                             fontWeight: FontWeight.bold,
                           ),
@@ -86,7 +86,7 @@ class ProductDetailScreen extends ConsumerWidget {
                         Text(
                           ' (2.6k+ review)',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             color: ColorsCustom.darkGray,
                           ),
                         ),
@@ -95,7 +95,7 @@ class ProductDetailScreen extends ConsumerWidget {
                   ],
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 SizeSelectorWidget(
                   onSelectSize: (size) {
@@ -103,11 +103,11 @@ class ProductDetailScreen extends ConsumerWidget {
                   },
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 const ColorsSelectorWidget(),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -118,7 +118,10 @@ class ProductDetailScreen extends ConsumerWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: const ExpansionTile(
-                    title: Text('Description'),
+                    title: Text(
+                      'Description',
+                      style: TextStyle(fontSize: 20),
+                    ),
                     children: <Widget>[
                       ListTile(title: Text('Some description')),
                     ],
@@ -131,8 +134,8 @@ class ProductDetailScreen extends ConsumerWidget {
       )),
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
+        elevation: 0,
         child: Container(
-          height: 56,
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
             borderRadius: BorderRadius.circular(15),

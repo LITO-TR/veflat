@@ -42,23 +42,20 @@ class CartProductListCardWidgetState
       child: SizedBox(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              width: size.width * 0.5,
+              width: size.width * 0.45,
               height: size.height * .2,
-              child: Positioned.fill(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                    widget.product.product.image,
-                    fit: BoxFit.cover,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  widget.product.product.image,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
             SizedBox(
-              width: size.width * 0.4,
               height: size.height * .2,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -72,21 +69,21 @@ class CartProductListCardWidgetState
                         Text(
                           widget.product.product.name,
                           style: const TextStyle(
-                            fontSize: 24,
+                            fontSize: 22,
                             color: ColorsCustom.primaryBlack,
                           ),
                         ),
                         Text(
                           'Size ${widget.size}',
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             color: ColorsCustom.darkGray,
                           ),
                         ),
                         Text(
                           '\$${widget.price}',
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             color: ColorsCustom.primaryBlack,
                             fontWeight: FontWeight.bold,
                           ),

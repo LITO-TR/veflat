@@ -49,7 +49,7 @@ class _ProductCardWidgetState extends State<ProductCardWidget> {
             children: [
               SizedBox(
                 width: size.width * 0.5,
-                height: size.height * .4,
+                height: size.height * .35,
                 child: Stack(
                   children: [
                     Positioned.fill(

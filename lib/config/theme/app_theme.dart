@@ -12,12 +12,13 @@ class AppTheme {
       iconTheme: const IconThemeData(
         color: ColorsCustom.primaryBlack,
       ),
-      //iconButtonTheme: const IconButtonThemeData(
-      //style: ButtonStyle(
-      //iconColor: WidgetStatePropertyAll(ColorsCustom.primaryBlack),
-      //backgroundColor: WidgetStatePropertyAll(Colors.transparent),
-      //),
-      //),
+
+      // iconButtonTheme: const IconButtonThemeData(
+      //   style: ButtonStyle(
+      //     iconColor: WidgetStatePropertyAll(ColorsCustom.primaryBlack),
+      //     backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+      //   ),
+      // ),
       appBarTheme: const AppBarTheme(
         color: ColorsCustom.primaryWhite,
         iconTheme: IconThemeData(color: Colors.white),

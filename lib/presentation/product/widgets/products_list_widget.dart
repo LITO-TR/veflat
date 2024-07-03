@@ -16,7 +16,7 @@ class ProductsListWidget extends ConsumerWidget {
     return Column(
       children: [
         SizedBox(
-          height: size.height * 0.04,
+          height: size.height * 0.03,
         ),
         SizedBox(
           width: size.width,

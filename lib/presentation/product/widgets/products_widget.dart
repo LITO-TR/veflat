@@ -9,14 +9,17 @@ class ProductsWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final product = ref.watch(productProvider);
-    return _buildBody(product, ref);
+    final size = MediaQuery.of(context).size;
+
+    return _buildBody(product, ref, size);
   }
 }
 
-Widget _buildBody(ProductState product, WidgetRef ref) {
+Widget _buildBody(ProductState product, WidgetRef ref, Size size) {
   if (product.initialLoading) {
-    return const Expanded(
-        child: Center(child: CircularProgressIndicator(strokeWidth: 2)));
+    return SizedBox(
+        height: size.height * 1,
+        child: const Center(child: CircularProgressIndicator(strokeWidth: 2)));
   } else if (product.errorMessage.isNotEmpty) {
     return RetryWidget(
       errorMessage: product.errorMessage,

@@ -20,7 +20,7 @@ class HomeHeaderWidget extends StatelessWidget {
             style: textTheme.bodyLarge,
           ),
           SizedBox(
-            height: size.height * 0.03,
+            height: size.height * 0.025,
           ),
           Container(
             decoration: BoxDecoration(
@@ -30,7 +30,7 @@ class HomeHeaderWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -67,15 +67,15 @@ class HomeHeaderWidget extends StatelessWidget {
                 ),
                 Image.asset(
                   'assets/images/portada.png',
-                  width: 200,
-                  height: 200,
+                  width: size.width * 0.35,
+                  height: size.height * .2,
                   fit: BoxFit.cover,
                 ),
               ],
             ),
           ),
           SizedBox(
-            height: size.height * 0.04,
+            height: size.height * 0.03,
           ),
           const HomeCategoryWidget(),
         ],
