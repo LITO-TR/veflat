@@ -45,7 +45,7 @@ class CartProductListCardWidgetState
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              width: size.width * 0.45,
+              width: size.width * 0.4,
               height: size.height * .2,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
@@ -56,7 +56,7 @@ class CartProductListCardWidgetState
               ),
             ),
             SizedBox(
-              height: size.height * .2,
+              height: size.height * .21,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -177,7 +177,7 @@ class CartProductListCardWidgetState
                             icon: const Icon(
                               Icons.close,
                               color: ColorsCustom.lightGray,
-                              size: 30,
+                              size: 28,
                             ))
                       ],
                     ),
